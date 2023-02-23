@@ -9,7 +9,10 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './components/Home';
-import Booking from './components/Booking';
+import Booking from './components/Services';
+import BookingDashboard from './components/BookingDashboard';
+import ContactDetails from './components/ContactDetails';
+import Services from './components/Services';
 
 const router = createBrowserRouter([
   {
@@ -22,7 +25,17 @@ const router = createBrowserRouter([
       },
       {
         path:"/booking",
-        element:<Booking></Booking>
+        element:<BookingDashboard></BookingDashboard>,
+        children:[
+          {
+            path:"/booking",
+            element:<ContactDetails></ContactDetails>
+          },
+          {
+            path:"/booking/services",
+            element:<Services></Services>
+          }
+        ]
       }
     ]
   },

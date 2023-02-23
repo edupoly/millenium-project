@@ -5,7 +5,7 @@ function Navbar() {
     <div>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container">
-          <a class="navbar-brand">Navbar</a>
+          <Link to="/" class="navbar-brand">Navbar</Link>
           <form class="d-flex">
             <Link to="/booking" class="btn btn-outline-success">Book Service</Link>
           </form>

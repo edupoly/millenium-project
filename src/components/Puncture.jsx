@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { serviceTypeCost } from "../store/pricelist";
 
 function Puncture(props) {
-  console.log("Props in puncture:",props.booking.booking.serviceList)
+  console.log("Props in puncture:",props.booking.booking)
   var [punTypes,setPunTypes]=React.useState([])
   useEffect(()=>{
     var t = Object.keys(serviceTypeCost.Puncture)
