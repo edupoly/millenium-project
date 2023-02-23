@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import Home from './components/Home';
 import Booking from './components/Booking';
+import HorizontalLabelPositionBelowStepper from './components/BookingSteps';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path:"/booking",
         element:<Booking></Booking>
+      },
+      {
+        path:"/bookingSteps",
+        element:<HorizontalLabelPositionBelowStepper></HorizontalLabelPositionBelowStepper>
       }
     ]
   },
