@@ -42,7 +42,7 @@ const router = createBrowserRouter([
             element:<Billing></Billing>
           },
           {
-            path:"/booking/payment",
+            path:"/booking/payment/:amount",
             element:<Payment></Payment>
           }
         ]

@@ -50,7 +50,7 @@ function Billing(props) {
       <h1>TotalBill:{billTotal}</h1>
       <input type="checkbox" onChange={(e)=>{setAgree(e.target.checked)}}/> I Aggree the above billing and here by confirming the TOTAL
       <br />
-      <Link to="/booking/payment">
+      <Link to={`/booking/payment/${billTotal}`}>
         <button disabled={!agree} className='btn btn-success'>Approve and Pay</button>
       </Link>
     </div>
