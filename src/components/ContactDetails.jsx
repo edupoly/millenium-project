@@ -4,8 +4,7 @@ import { useNavigate } from "react-router-dom"
 
 function ContactDetails(props) {
   var navigate=useNavigate();
-  console.log("navigate::",navigate)
-  console.log(props)
+
   var formik = useFormik({
     initialValues:{
       fullname:'',
