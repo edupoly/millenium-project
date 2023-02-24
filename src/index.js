@@ -14,6 +14,7 @@ import BookingDashboard from './components/BookingDashboard';
 import ContactDetails from './components/ContactDetails';
 import Services from './components/Services';
 import Billing from './components/Billing';
+import Payment from './components/Payment';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
           {
             path:"/booking/billing",
             element:<Billing></Billing>
+          },
+          {
+            path:"/booking/payment",
+            element:<Payment></Payment>
           }
         ]
       }

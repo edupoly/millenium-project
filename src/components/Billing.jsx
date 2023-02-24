@@ -1,9 +1,11 @@
 import { connect } from "react-redux";
 import React,{useEffect,useState} from 'react'
 import { serviceTypeCost } from "../store/pricelist";
+import { Link } from "react-router-dom";
 function Billing(props) {
   const [bill, setBill] = useState([])
-  const [billTotal, setBillTotal] = useState(0)
+  const [billTotal, setBillTotal] = useState(0);
+  const [agree, setAgree] = useState(false)
   useEffect(()=>{
     var booking = props.booking.booking;
     var selectedServices=Object.keys(booking.serviceList);
@@ -46,6 +48,11 @@ function Billing(props) {
         }
       </ul>
       <h1>TotalBill:{billTotal}</h1>
+      <input type="checkbox" onChange={(e)=>{setAgree(e.target.checked)}}/> I Aggree the above billing and here by confirming the TOTAL
+      <br />
+      <Link to="/booking/payment">
+        <button disabled={!agree} className='btn btn-success'>Approve and Pay</button>
+      </Link>
     </div>
   )
 }
