@@ -14,38 +14,51 @@ function ContactDetails(props) {
     },
     onSubmit:(values)=>{
       props.dispatch({type:'UPDATEDETAILS',payload:values})
+      props.dispatch({type:'UPDATESTEP',payload:1})
       navigate("services")
     }
   })
   return (
-    <div>
-      <h1 className="text-center">ContactDetails</h1>
+    <div className="m-4">
       <form onSubmit={formik.handleSubmit}>
-        <div className="d-flex flex-wrap justify-content-center">
-            
-          <div className="p-2">
-            <b>FullName:</b>
-            <br></br>
-            <input type="text" name="fullname" onChange={formik.handleChange} placeholder="Full Name"/><br/>
-            <b>Mobile:</b>
-            <br></br>
-            <input type="text" name="mobile" onChange={formik.handleChange} placeholder="Mobile Number"/><br/>
-            <b>Registration:</b>
-            <br></br>
-            <input type="text" name="regNumber" onChange={formik.handleChange} placeholder="Reg Number"/><br/>
+        <div className="row w-75 mx-auto">
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Full Name</label>
+            <input className="form-control" type="text" name="fullname" onChange={formik.handleChange} placeholder="Full Name"/><br/>
           </div>
-          <div className="p-2">
-            <b>Cart Type</b>
-            <br></br>
-            <input type="radio" name="carType" onChange={formik.handleChange} value="hb"/>:Hatchback<br/>
-            <input type="radio" name="carType" onChange={formik.handleChange} value="co"/>:Crossover<br/>
-            <input type="radio" name="carType" onChange={formik.handleChange} value="sd"/>:Sedan<br/>
-            <input type="radio" name="carType" onChange={formik.handleChange} value="suv"/>:SUV<br/>
-            <button type="submit" className="btn btn-success">Next</button>
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input className="form-control" type="text" name="mobile" onChange={formik.handleChange} placeholder="Mobile Number"/><br/>
+          </div>
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input className="form-control" type="text" name="regNumber" onChange={formik.handleChange} placeholder="Reg Number"/><br/>
+          </div>
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <div className="form-control">
+              <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" name="carType" onChange={formik.handleChange} value="hb"/>
+                <label class="form-check-label" for="inlineRadio1">:Hatchback</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="radio"class="form-check-input"  name="carType" onChange={formik.handleChange} value="co"/>
+                <label class="form-check-label" for="inlineRadio2">:Crossover</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="carType" onChange={formik.handleChange} value="sd"/>
+                <label class="form-check-label" for="inlineRadio3">:Sedan</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input"  name="carType" onChange={formik.handleChange} value="suv"/>
+                <label class="form-check-label" for="inlineRadio3">:SUV</label>
+              </div>
+            </div>
+          </div>
+          <div className="d-flex justify-content-end">
+            <button type="submit" className="btn btn-success">Go to Next</button>
           </div>
         </div>
-       
-       
         
       </form>
     </div>
