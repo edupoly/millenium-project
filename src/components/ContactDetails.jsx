@@ -27,15 +27,15 @@ function ContactDetails(props) {
             <input className="form-control" type="text" name="fullname" onChange={formik.handleChange} placeholder="Full Name"/><br/>
           </div>
           <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Email</label>
+            <label for="inputEmail4" class="form-label">Mobile</label>
             <input className="form-control" type="text" name="mobile" onChange={formik.handleChange} placeholder="Mobile Number"/><br/>
           </div>
           <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Email</label>
+            <label for="inputEmail4" class="form-label">Car Reg Number</label>
             <input className="form-control" type="text" name="regNumber" onChange={formik.handleChange} placeholder="Reg Number"/><br/>
           </div>
           <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Email</label>
+            <label for="inputEmail4" class="form-label">Select your Car Type</label>
             <div className="form-control">
               <div class="form-check form-check-inline">
                 <input type="radio" class="form-check-input" name="carType" onChange={formik.handleChange} value="hb"/>
